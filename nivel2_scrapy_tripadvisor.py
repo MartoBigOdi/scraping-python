@@ -20,7 +20,9 @@ class Hotel(Item):
 class TripAdvisor(CrawlSpider):
     name = "hotels_tripadvisor"
     custom_settings = {
-        'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+        'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        'CLOSESPIDER_PAGECOUNT': 20  # Numero maximo de paginas en las cuales voy a descargar items. Scrapy se cierra cuando alcanza este numero
+
     }
     allowed_domains = ['tripadvisor.com']
     start_urls = ['https://www.tripadvisor.com/Hotels-g60763-New_York_City_New_York-Hotels.html']
