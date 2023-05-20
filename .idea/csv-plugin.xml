@@ -10,13 +10,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\resultados_mercadolibre\mercadolibre_neumaticos_20_paginas.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\resultados_tripadvisor\tripadvisor_nivel2.csv">
           <value>
             <Attribute>
