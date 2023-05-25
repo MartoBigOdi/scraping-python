@@ -10,8 +10,6 @@ OBJETIVO:
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -27,7 +25,7 @@ driver.maximize_window()
 
 # LOGICA DE MAXIMA PAGINACION CON LAZO WHILE
 # VECES VOY A PAGINAR HASTA UN MAXIMO DE 10 
-PAGINACION_MAX = 5
+PAGINACION_MAX = 2
 PAGINACION_ACTUAL = 1
 
 sleep(3) # Esperar a que todo cargue correctamente
@@ -82,6 +80,7 @@ while PAGINACION_MAX > PAGINACION_ACTUAL:
   # Logica de deteccion de fin de paginacion
   try:
     # Intento obtener el boton de SIGUIENTE y le intento dar click
+    print('FINAL SCARPING')
     puedo_seguir_horizontal = driver.find_element(By.XPATH, '//span[text()="Siguiente"]')
     puedo_seguir_horizontal.click()
   except: 
