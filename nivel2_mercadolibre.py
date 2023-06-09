@@ -6,7 +6,6 @@ OBJECTIVE:
 from scrapy.item import Field
 from scrapy.item import Item
 from scrapy.spiders import CrawlSpider, Rule
-from scrapy.selector import Selector
 from scrapy.loader.processors import MapCompose
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
@@ -22,7 +21,7 @@ class MercadoLibreCrawler(CrawlSpider):
 
     custom_settings = {
       'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-      'CLOSESPIDER_PAGECOUNT': 20 # Numero maximo de paginas en las cuales voy a descargar items. Scrapy se cierra cuando alcanza este numero
+      'CLOSESPIDER_PAGECOUNT': 4 # Numero maximo de paginas en las cuales voy a descargar items. Scrapy se cierra cuando alcanza este numero
     }
 
     # Utilizamos 2 dominios permitidos, ya que los articulos utilizan un dominio diferente
