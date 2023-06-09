@@ -21,13 +21,17 @@ class MercadoLibreCrawler(CrawlSpider):
 
     custom_settings = {
       'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-      'CLOSESPIDER_PAGECOUNT': 4 # Numero maximo de paginas en las cuales voy a descargar items. Scrapy se cierra cuando alcanza este numero
+      'CLOSESPIDER_PAGECOUNT': 10 # Numero maximo de paginas en las cuales voy a descargar items. Scrapy se cierra cuando alcanza este numero
     }
 
     # Utilizamos 2 dominios permitidos, ya que los articulos utilizan un dominio diferente
+    # le pasamos por variable el producto a buscar
+    # armamos el start_url con el producto y el base url
     allowed_domains = ['mercadolibre.com.ar']
-
-    start_urls = ['https://vehiculos.mercadolibre.com.ar/']
+    # puede ser cualquier producto
+    producto_busqueda = 'hondacg150'
+    base_url = 'https://listado.mercadolibre.com.ar/'
+    start_urls = [base_url + producto_busqueda]
 
     download_delay = 1
 
@@ -52,7 +56,7 @@ class MercadoLibreCrawler(CrawlSpider):
         item.add_xpath('titulo', '//h1/text()', MapCompose(lambda i: i.replace('\n', ' ').replace('\r', ' ').strip()))
         item.add_xpath('descripcion', '//div[@class="ui-pdp-description"]/p/text()', MapCompose(lambda i: i.replace('\n', ' ').replace('\r', ' ').strip()))
 
-        soup = BeautifulSoup(response.body)
+        soup = BeautifulSoup(response.body, features="lxml")
         precio = soup.find(class_="andes-money-amount__fraction")
         precio_completo = precio.text.replace('\n', ' ').replace('\r', ' ').replace(' ', '') # texto de todos los hijos
         item.add_value('precio', precio_completo)
