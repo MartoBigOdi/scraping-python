@@ -12,11 +12,12 @@
 
 ## Funcionalidades 👨🏻‍💻
 
-| Funcionalidad | Descripción                                                                      |
-|---------------|----------------------------------------------------------------------------------|
-| Nivel 1       | Nivel Basico, nulo de conocimiento de las tecnologias a utilizar.                |
-| Nivel 2       | Nivel intermedio de uso de las tecnologias                                       |
-| Nivel 3       | Nivel avanzado, con entendimiento pleno de las tecnologias utilizadas en el repo |
+| Funcionalidad | Descripción               |
+|---------------|---------------------------|
+| Nivel 1       | stackOverflow             |
+| Nivel 2       | MercadoLibre, TripAdvisor |
+| Nivel 3       | MercadoLibre, Olx         |
+| Nivel 4       | Github                    |
 
 ## Instalación
 Validar con requirements.txt

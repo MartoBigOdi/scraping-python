@@ -4,8 +4,8 @@ Fomatos del archivo con el resultado: JSON y CSV
 la "-O" para indicar que sobre escribimos el archivo en cada ejecucion.
 la "-o" es para seguir sumando info al archivo que le indicamos con el comando, si no tenemos este archivos lo crea
 por nosotros.
-comando JSON: "scrapy runspider scrapy_beuatiful_eluniverso.py -O eluniverso_diario.json"
-comando CSV: "scrapy runspider scrapy_beuatiful_eluniverso.py -O eluniverso_diario.csv"
+comando JSON: "scrapy runspider nivel_2_scrapy_beuatiful_eluniverso.py -O eluniverso_diario.json"
+comando CSV: "scrapy runspider nivel_2_scrapy_beuatiful_eluniverso.py -O eluniverso_diario.csv"
 Para ejecutar la app con este comando debemos comentar las lineas donde utilizamos la clase "CrawlerProcess"
 '''
 from scrapy.item import Field

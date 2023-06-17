@@ -29,7 +29,7 @@ class MercadoLibreCrawler(CrawlSpider):
     # armamos el start_url con el producto y el base url
     allowed_domains = ['mercadolibre.com.ar']
     # puede ser cualquier producto
-    producto_busqueda = 'hondacg150'
+    producto_busqueda = 'bulldog-ingles'
     base_url = 'https://listado.mercadolibre.com.ar/'
     start_urls = [base_url + producto_busqueda]
 

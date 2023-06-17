@@ -5,7 +5,7 @@ xpath antes que cualquier otro atributo. Mismo conviene en cualquier marco de at
 @:parameter primer para metro, Pregunta() --> Clase Pregunta
             Segundo parametro, Selector --> html que contiene el elemento.
 
-#### Comando para correr el archivo:  scrapy runspider scrapy_stackoverflow.py -O stackoverflow_questions.csv:csv
+#### Comando para correr el archivo:  scrapy runspider nivel1_scrapy_stackoverflow.py -O stackoverflow_questions.csv:csv
 Capturamos data pero sin limpieza de datos
 '''
 from scrapy.item import Field
