@@ -1,8 +1,7 @@
-
-
 # Basick Skills for Scrap / Skill basicos para scrapeo de datos
 
 ### Hacele fork 🍴
+## Crea tu variable de entorno en la raiz del proyecto
 
 ## Scraping con Python 🐍
 - Scrapeamos webs.
